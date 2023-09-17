@@ -1,0 +1,1 @@
+# test_task_image_storage
