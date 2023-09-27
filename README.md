@@ -25,10 +25,12 @@ After instalation you will have 3 user(usernames: basic, premium, enterprise; pa
 To log-in send a POST request to `http://0.0.0.0:8000/api/login/` with fields username and password, and you will get access and update tokens
 You can refresh token on `http://0.0.0.0:8000/api/login/refresh/`
 With tokens you will have access to app
-### Endpoints(required header Authorization: Bearer `access token`)
+### Endpoints(required header Authorization: Bearer {`access token`})
 1.`api/v1/img` : handle GET and POST requests
 on GET request you will get list of links to your images
 POST handle image upload(required fields for POST: name, image_file)
+
+
 2.`api/v1/img/<int:pk>` handle POST request, allow to create expiring link(only for users with certain ability)(required field: expiration_time)
 it will return a expiration link which will redirect you to a image, and last for provided amount of seconds
 
